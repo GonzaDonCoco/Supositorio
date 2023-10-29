@@ -13,7 +13,7 @@ while a==1:
     try:
         if 0 < op < 6 :
             if op==1:
-                cant =input(print('Ha seleccionado Pan Amasado\nCuánto quiere comprar?  : '))
+                cant=input(print('Ha seleccionado Pan Amasado\nCuánto quiere comprar?  : '))
                 pan.insert(0,cant)
                 print(f'{cant} a un total de {cant*ama}')
                 cont=int(input('Desea comprar otro tipo de pan? 1=SI 2=NO : '))
@@ -48,8 +48,12 @@ while a==1:
                 print('Usted desea salir del menu')
                 print('Hasta luego')
                 a=0
+        else:
+            print('Ingresa una opcion valida porfa\n')
     except(ValueError):
-        print('Ingresa una opcion valida porfa')
+        print('Ingrese un valor valido porfa\n')
     except(TypeError):
-        print('Ingresa un valor valido porfa')
+        print('Ingresa un tipo valido porfa\n')
+    
+
 #Resultados
