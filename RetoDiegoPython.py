@@ -12,4 +12,5 @@ if (re.search(patron,user_input)):
 else:
     print('Email inválido')
 
+contraseña="[a-zA-Z0-9]"
 #Numeros de 1 a 1000 donde los pares printean "Fizz" e impares "Buzz"
