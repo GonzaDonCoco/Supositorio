@@ -2,11 +2,21 @@
 import random as r
 import numpy as np
 
-#Crear un arreglo unidimensional de largo 10 con numeros random y luego ingresar un numero y verificar si se encuentra en el arreglo
+def menu():
+    print('------------------')
+    print('Menu Simple')
+    print('[1]-Ejercicio 1')
+    print('[2]-Ejercicio 2')
+    print('[3]-Ejercicio 3')
+    print('[8] Para salir')
+    print('------------------')
+
+
 def ejercicio_1():
+    #Crear un arreglo unidimensional de largo 10 con numeros random y luego ingresar un numero y verificar si se encuentra en el arreglo
     arreglo= [r.randint(1,100) for i in range(10)]
 
-    print(arreglo)
+    print(f'El arreglo es = {arreglo}')
 
     numero=int(input('Ingrese el numero a buscar en el arreglo'))
 
@@ -20,10 +30,23 @@ def ejercicio_2():
     columnas=int(input('Ingrese un numero entre 3 y 6 (pueden ser ambos)'))
 
     if 3<= filas <=6 and 3<=columnas <=6:
-        arreglo = np.random.random(filas,columnas)
+        arreglo = np.random.randint(1, 100, size=(filas, columnas))
+        print(arreglo)
     else:
         print('chimbarongo')
-    print(arreglo)
+    
 
-print('hola')
-ejercicio_2
+opcion=0
+while opcion!=8:
+    menu()
+    try:
+        opcion=int(input('Ingrese una opcion'))
+        if opcion==1:
+            ejercicio_1()
+        elif opcion==2:
+            ejercicio_2()
+        elif opcion==8:
+            print('Hasta luego')
+
+    except ValueError:
+        print("Debe ingresar un numero")
