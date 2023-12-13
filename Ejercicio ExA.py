@@ -1,9 +1,11 @@
-#Ejercicios para el examen
+#Ejercicio para el examen
 import numpy as np
 import datetime as dt
 
 escenario=np.arange(1,101).reshape(10,10)
-#print(escenario)
+entradas=np.array([['Platinum',120000],['Gold',80000],['Silver',50000]])
+
+#print(entradas)
 
 sw=True
 
@@ -17,7 +19,15 @@ def menu():
 
 def comprarEntradas():
     cantidad_entradas=int(input('Ingrese la cantidad de entradas a comprar 1-3: '))
-    if cantidad_entradas
+    if 1<=cantidad_entradas<=3:
+        asientosDisp()
+        for i in entradas:
+            print(f'{entradas[i,i]} por ${entradas[i,i]}')
+
+
+        
+
+
 
 
 def asientosDisp():
@@ -48,7 +58,7 @@ while sw:
         if opcion!=5:
             if opcion==1:
                 #Comprar entradas
-                print('comprarEntradas()')
+                comprarEntradas()
             elif opcion==2:
                 #Mostrar asientos disponibles
                 asientosDisp()
