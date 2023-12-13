@@ -15,9 +15,16 @@ def menu():
     print("4. Mostrar ganancias totales")
     print("5. Salir")
 
-#def comprarEntradas():
+def comprarEntradas():
+    cantidad_entradas=int(input('Ingrese la cantidad de entradas a comprar 1-3: '))
+    if cantidad_entradas
 
-def asientosDisp()
+
+def asientosDisp():
+    print('---Escenario---')
+    print(escenario)
+    print('----------------------------')
+
     
 
     
@@ -32,7 +39,7 @@ def salir():
 
 
 
-'''
+
 
 while sw:
     try:
@@ -41,16 +48,16 @@ while sw:
         if opcion!=5:
             if opcion==1:
                 #Comprar entradas
-                comprarEntradas()
+                print('comprarEntradas()')
             elif opcion==2:
                 #Mostrar asientos disponibles
                 asientosDisp()
             elif opcion==3: 
                 #Ver listado de asistentes
-                listAsistentes
+                print('listAsistentes')
             elif opcion==4:
                 #Mostrar ganancias totales
-                gananciaTotal()
+                print('gananciaTotal()')
         else:
             salir()
             #sw=False
@@ -59,4 +66,4 @@ while sw:
     except (ValueError):
         print('Ingrese un valor válido')
     except(TypeError):
-        print('Ingrese una opción válida')'''
+        print('Ingrese una opción válida')
