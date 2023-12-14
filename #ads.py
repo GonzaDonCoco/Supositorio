@@ -2,25 +2,28 @@
 
 import numpy as np
 
-'''Los precios de las entradas son los siguientes:
- Platinum, $120.000. (Asientos del 1 al 20).
- Gold, $80.000. (Asientos del 21 al 50).
- Silver, $50.000. (Asientos del 51 al 100.).'''
+# Crear la matriz de la cancha
+cancha = np.arange(1, 101).reshape(10, 10)
 
-escenario=np.arange(1,101).reshape(10,10)
-entradas=np.array([['Platinum',120000],['Gold',80000],['Silver',50000]])
-run=input('papa')
+# Solicitar al usuario que elija un asiento
+asiento = int(input('\nEscoja un asiento (1-100): '))
 
+# Verificar si el asiento está en la cancha
+if asiento in cancha:
+    # Encontrar la posición del asiento
+    posicion = np.where(cancha == asiento)
 
+    # Mostrar la posición del asiento
+    print(f"Posición del asiento {asiento}: Fila {posicion[0][0]}, Columna {posicion[1][0]}")
 
-print(escenario[1,1])
-print('')
-#Para convertir a entero y poder calcular
-print(entradas[1,1].astype(int)*2)
-if run.idigit() and run.len==9 :
-    print('a')
+    # Reemplazar el asiento con un 0
+    cancha[posicion[0][0], posicion[1][0]] = 0
+
+    # Mostrar la matriz actualizada
+    print("Matriz actualizada:")
+    print(cancha)
 else:
-    print('b')
+    print("El asiento no está en la cancha.")
 
 
 
